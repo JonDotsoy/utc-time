@@ -1,5 +1,7 @@
 This is a web application that allows you to input a date and a timezone, and it will display the time in the specified timezone. Additionally, the application can receive timezone, date, and locale parameters in the URL.
 
+![](./assets/demo.png)
+
 
 ## Installation
 
