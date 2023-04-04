@@ -1,0 +1,21 @@
+{
+  "name": "utc-time",
+  "private": "true",
+  "version": "1.0.0",
+  "description": "A web application that displays the time in a specified timezone",
+  "scripts": {
+    "start": "next dev"
+  },
+  "keywords": [],
+  "author": "Jonathan Delgado <hi@jon.soy> (https://jon.soy)",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^13.2.4",
+    "timezones.json": "^1.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.15.11",
+    "@types/react": "18.0.33",
+    "typescript": "5.0.3"
+  }
+}
