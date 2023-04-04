@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "A web application that displays the time in a specified timezone",
   "scripts": {
-    "start": "next dev"
+    "dev": "next dev"
   },
   "keywords": [],
   "author": "Jonathan Delgado <hi@jon.soy> (https://jon.soy)",
