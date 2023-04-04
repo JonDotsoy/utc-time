@@ -16,7 +16,7 @@ To install this application, you must have Node.js installed on your computer.
 
 To run the application, navigate to the root directory of the project in your terminal and run `npm start`. This will start the server and the application will be available at `http://localhost:3000`.
 
-To pass parameters through the URL, use the following format: `http://localhost:3000/?timezone=<timezone>&date=<date>&locale=<locale>`. Replace <timezone>, <date>, and <locale> with the desired values.
+To pass parameters through the URL, use the following format: `http://localhost:3000/?timezone=<timezone>&date=<date>&locale=<locale>`. Replace `<timezone>`, `<date>`, and `<locale>` with the desired values.
 
 
 ## Contributing
