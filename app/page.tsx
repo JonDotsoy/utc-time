@@ -98,8 +98,6 @@ const notifications = new class {
 const NotificationBox: FC<PropsWithChildren> = ({ children }) => {
     const messages = notifications.useNotifications()
 
-    console.log(messages)
-
     return <>
         {children}
         <div className="absolute bottom-0 right-0 p-2 flex gap-2 flex-col items-end">
@@ -114,11 +112,13 @@ const Page: FC<P> = (props) => {
     const [locale, setLocale] = useState<string | null>(safeLocale(props.searchParams.locale) ?? "en-US")
 
     const toURLString = () => {
-        const url = new URL(location.href)
-        url.searchParams.set("locale", locale)
-        url.searchParams.set("date_epoch_milliseconds", `${date.getTime()}`)
-        url.searchParams.set("timezone", timezone)
-        return url.toString()
+        if (globalThis.location) {
+            const url = new URL(location.href)
+            url.searchParams.set("locale", locale)
+            url.searchParams.set("date_epoch_milliseconds", `${date.getTime()}`)
+            url.searchParams.set("timezone", timezone)
+            return url.toString()
+        }
     }
 
     const formRef = useRef<HTMLFormElement>()
@@ -195,7 +195,7 @@ const Page: FC<P> = (props) => {
                     <p className="text-xl text-center"><strong>Epoch Milliseconds</strong>: <LabelCopy>{date.getTime().toString()}</LabelCopy></p>
                     <p className="text-xl text-center"><strong>ISO</strong>: <LabelCopy>{date.toISOString()}</LabelCopy></p>
                     <p className="text-xl text-center"><strong>UTC</strong>: <LabelCopy>{date.toUTCString()}</LabelCopy></p>
-                    <p className="text-xl text-center"><strong>URL Share</strong>: <LabelCopy>{toURLString()}</LabelCopy></p>
+                    <p className="text-xl text-center"><strong>URL Share</strong>: <span className="block overflow-auto"><LabelCopy>{toURLString()}</LabelCopy></span></p>
                 </div>
             </div>
         </NotificationBox>
