@@ -1,3 +1,7 @@
 node_modules
 .vscode
 .next
+!.github/
+
+# Local Netlify folder
+.netlify

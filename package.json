@@ -4,13 +4,15 @@
   "version": "1.0.0",
   "description": "A web application that displays the time in a specified timezone",
   "scripts": {
-    "dev": "next dev"
+    "start": "next start",
+    "dev": "next dev",
+    "build": "next build"
   },
   "keywords": [],
   "author": "Jonathan Delgado <hi@jon.soy> (https://jon.soy)",
   "license": "MIT",
   "dependencies": {
-    "next": "^13.2.4",
+    "next": "^13.2.5-canary.30",
     "timezones.json": "^1.7.0"
   },
   "devDependencies": {
