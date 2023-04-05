@@ -190,7 +190,7 @@ const Page: FC<P> = (props) => {
 
                 </form>
 
-                <div>
+                <div className="mt-2">
                     <p className="text-4xl text-center"><LabelCopy>{date.toLocaleString(locale, { timeStyle: "full", dateStyle: "full", hourCycle: "h23", timeZone: timezone })}</LabelCopy></p>
                     <p className="text-xl text-center"><strong>Epoch Milliseconds</strong>: <LabelCopy>{date.getTime().toString()}</LabelCopy></p>
                     <p className="text-xl text-center"><strong>ISO</strong>: <LabelCopy>{date.toISOString()}</LabelCopy></p>

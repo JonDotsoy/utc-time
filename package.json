@@ -13,6 +13,8 @@
   "license": "MIT",
   "dependencies": {
     "next": "^13.2.5-canary.30",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "timezones.json": "^1.7.0"
   },
   "devDependencies": {

@@ -1,0 +1,13 @@
+.github
+Dockerfile
+app/
+!.next/
+postcss.config.js
+compose.yaml
+tailwind.config.js
+tsconfig.json
+.dockerignore
+.netlify/
+.dockerignore
+.vscode/
+*.tgz
